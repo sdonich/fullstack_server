@@ -28,6 +28,8 @@ require('./routes/billingRoutes')(app);
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
+    console.log(process.env);
+
 
     const path = require('path');
     app.get('*', (req, res) => {
