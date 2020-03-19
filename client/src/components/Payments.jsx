@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 
 const Payments = (props) => {
+    console.log(process.env.REACT_APP_STRIPE_KEY);
     return (
         <StripeCheckout
             name="Emaily"
