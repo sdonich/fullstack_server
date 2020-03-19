@@ -28,11 +28,13 @@ require('./routes/billingRoutes')(app);
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
-    console.log(process.env);
+    
 
 
     const path = require('path');
     app.get('*', (req, res) => {
+        console.log('hello');
+        console.log(process.env);
         res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
     });
 }
